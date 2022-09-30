@@ -1,40 +1,6 @@
 h1 {
     font-size: 35px;
     font-weight: 800;
-    padding: 1rem 0 1rem 0;
+    padding: 1.3rem 0 1.3rem 0;
     text-align: center;
-}
-
-.all-cards {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 3rem;
-    row-gap: 4rem;
-}
-
-.all-cards li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.all-cards img {
-    width: 200px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-.all-cards a {
-    transition: all 0.2s;
-}
-
-.all-cards a:hover {
-    transform: scale(1.1);
-}
-
-.all-cards span {
-    font-weight: 700;
-    font-size: 18px;
 }
