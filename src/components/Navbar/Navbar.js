@@ -5,6 +5,11 @@ function Navbar() {
   return (
     <nav className='navbar-container'>
       <img className='navbar-image' src={logo} alt="" />
+      {/* <ul className='header-options'>
+        <li>
+          New character
+        </li>
+      </ul> */}
     </nav>
   );
 }

@@ -1,12 +1,28 @@
-import { CharactersMocks } from "../../mocks/CharactersMocks";
+// import { CharactersMocks } from "../../mocks/CharactersMocks";
 import "./CharactersList.css";
+import { useState, useEffect } from "react";
+import { api } from "../../utils/api/api";
 
 function CharactersList() {
+  const [characters, setCharacters] = useState([]);
+
+  const getCharacters = async () => {
+    const response = await api.getAllCharacters();
+    setCharacters(response);
+  };
+
+  console.log(characters);
+
+  useEffect(() => {
+    getCharacters();
+  }, []);
+
   return (
     <div>
-      {CharactersMocks.map((character, index) => (
+      {characters.map((character, index) => (
         <ul className="all-characters" key={`all-characters-${index}`}>
           <li>
+            <title>{character._id}</title>
             <a href="https://www.google.com/">
               <img src={character.imageUrl} alt="Mickey Mouse" />
             </a>

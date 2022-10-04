@@ -13,8 +13,8 @@ export const api = {
       return newCharacter;
     },
 
-  getAllCharacters: async () => {
-    const response = await fetch(`${defaultURL}`);
+  getAllCharacters: async (id) => {
+    const response = await fetch(`${defaultURL}/:${id}`);
     const allCharacters = response.json();
     return allCharacters;
   },
