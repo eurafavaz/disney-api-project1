@@ -13,10 +13,11 @@ export const api = {
       return newCharacter;
     },
 
+      // Alterações propostas pelo Leo no feedback da entrega 1; compreender modificações do escopo inicial (El Geladon)
   getAllCharacters: async (id) => {
-    const response = await fetch(`${defaultURL}/:${id}`);
-    const allCharacters = response.json();
-    return allCharacters;
+    const response = await fetch(`${defaultURL}/`);
+    const allCharacters = await response.json();
+    return allCharacters.data;
   },
 
   getCharacterById: async (id) => {
