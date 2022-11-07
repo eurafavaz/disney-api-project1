@@ -5,11 +5,41 @@
 
 .navbar-container {
     display: flex;
-    align-items: center;
+    align-items: space;
     justify-content: center;
     background-color: #1F7FDD;
     border-radius: 8px;
     margin-bottom: 1.5rem;
+}
+
+.navbar-container .image-boxer {
+    margin-left: 30px;
+    width: 50%;
+}
+
+.navbar-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    width: 50%;
+    margin-right: 30px;
+}
+
+.navbar-container button {
+    background-color: aliceblue;
+    cursor: pointer;
+    border: none;
+    color: #313A46;
+    padding: 6px 18px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.navbar-container button:hover {
+    transform: scale(1.1);
 }
 
 .navbar-image {
