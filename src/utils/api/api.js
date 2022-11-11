@@ -1,19 +1,18 @@
 const defaultURL = "https://api.disneyapi.dev/characters";
 
 export const api = {
-    createCharacters: async (character) => {
-      const response = await fetch(`${defaultURL}/create`, {
-        method: "POST",
-        headers: new Headers({ "Content-Type": "application/json" }),
-        body: JSON.stringfy(character),
-      });
+  createCharacters: async (character) => {
+    const response = await fetch(`${defaultURL}/create`, {
+      method: "POST",
+      headers: new Headers({ "Content-Type": "application/json" }),
+      body: JSON.stringfy(character),
+    });
 
-      const newCharacter = await response.json();
+    const newCharacter = await response.json();
 
-      return newCharacter;
-    },
+    return newCharacter;
+  },
 
-      // Alterações propostas pelo Leo no feedback da entrega 1; compreender modificações do escopo inicial (El Geladon)
   getAllCharacters: async (id) => {
     const response = await fetch(`${defaultURL}/`);
     const allCharacters = await response.json();
